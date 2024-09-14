@@ -6,6 +6,8 @@ public class rotate : MonoBehaviour
 {
     [SerializeField]
     private Transform rotCheck;
+    [SerializeField]
+    private float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,20 +20,29 @@ public class rotate : MonoBehaviour
         //if I need to rotate
         if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z) != Mathf.Floor(rotCheck.rotation.eulerAngles.z))
         {
+            Debug.Log(rotCheck.rotation.eulerAngles.z);
             Debug.Log(transform.rotation.eulerAngles.z);
-            if(Mathf.Abs(transform.rotation.eulerAngles.z) > Mathf.Abs(rotCheck.rotation.eulerAngles.z) && transform.rotation.eulerAngles.z < 355f && transform.rotation.eulerAngles.z > 10f)
+            if(transform.rotation.eulerAngles.z < 90 && rotCheck.rotation.eulerAngles.z > 270)
             {
-                gameObject.transform.Rotate(new Vector3(0, 0, -3f));
-
+                gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+            }
+            else if (rotCheck.rotation.eulerAngles.z < 90 && transform.rotation.eulerAngles.z > 270){
+                gameObject.transform.Rotate(new Vector3(0, 0, speed));
             }
             else
             {
-              
+                if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z )
+                {
+                    gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                }
+                else
+                {
+                    gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                }
                
-                gameObject.transform.Rotate(new Vector3(0, 0, 3f));
-               
-               
+
             }
+           
            
         }
     }
