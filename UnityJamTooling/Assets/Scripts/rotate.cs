@@ -21,14 +21,14 @@ public class rotate : MonoBehaviour
             Debug.Log(transform.rotation.eulerAngles.z);
             if(Mathf.Abs(transform.rotation.eulerAngles.z) > Mathf.Abs(rotCheck.rotation.eulerAngles.z) && transform.rotation.eulerAngles.z < 355f && transform.rotation.eulerAngles.z > 10f)
             {
-                gameObject.transform.Rotate(new Vector3(0, 0, -1f));
+                gameObject.transform.Rotate(new Vector3(0, 0, -3f));
 
             }
             else
             {
               
                
-                gameObject.transform.Rotate(new Vector3(0, 0, 1f));
+                gameObject.transform.Rotate(new Vector3(0, 0, 3f));
                
                
             }
