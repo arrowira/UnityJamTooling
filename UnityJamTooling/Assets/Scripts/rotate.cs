@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class rotate : MonoBehaviour
 {
+    [SerializeField]
+    private Transform rotCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +13,26 @@ public class rotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        //if I need to rotate
+        if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z) != Mathf.Floor(rotCheck.rotation.eulerAngles.z))
+        {
+            Debug.Log(transform.rotation.eulerAngles.z);
+            if(Mathf.Abs(transform.rotation.eulerAngles.z) > Mathf.Abs(rotCheck.rotation.eulerAngles.z) && transform.rotation.eulerAngles.z < 355f && transform.rotation.eulerAngles.z > 10f)
+            {
+                gameObject.transform.Rotate(new Vector3(0, 0, -1f));
+
+            }
+            else
+            {
+              
+               
+                gameObject.transform.Rotate(new Vector3(0, 0, 1f));
+               
+               
+            }
+           
+        }
     }
 }
