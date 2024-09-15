@@ -8,6 +8,7 @@ public class rotate : MonoBehaviour
     private Transform rotCheck;
     [SerializeField]
     private float speed;
+    public bool isTurningRight, isTurningLeft = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +21,19 @@ public class rotate : MonoBehaviour
         //if I need to rotate
         if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z/2) != Mathf.Floor(rotCheck.rotation.eulerAngles.z/2))
         {
+            
             Debug.Log(rotCheck.rotation.eulerAngles.z);
             Debug.Log(transform.rotation.eulerAngles.z);
             if(transform.rotation.eulerAngles.z < 90 && rotCheck.rotation.eulerAngles.z > 270)
             {
                 gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                isTurningRight = true;
+                isTurningLeft = false;
             }
             else if (rotCheck.rotation.eulerAngles.z < 90 && transform.rotation.eulerAngles.z > 270){
                 gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                isTurningRight = false;
+                isTurningLeft = true;
             }
             else
             {
@@ -36,10 +42,14 @@ public class rotate : MonoBehaviour
                     if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z)
                     {
                         gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                        isTurningRight = false;
+                        isTurningLeft = true;
                     }
                     else
                     {
                         gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                        isTurningRight = true;
+                        isTurningLeft = false;
                     }
                     
                 }
@@ -48,10 +58,14 @@ public class rotate : MonoBehaviour
                     if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z)
                     {
                         gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                        isTurningRight = true;
+                        isTurningLeft = false;
                     }
                     else
                     {
                         gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                        isTurningRight = false;
+                        isTurningLeft = true;
                     }
                 }
                
@@ -59,6 +73,11 @@ public class rotate : MonoBehaviour
             }
            
            
+        }
+        else
+        {
+            isTurningRight = false;
+            isTurningLeft = false;
         }
     }
 }

@@ -11,6 +11,7 @@ public class SMovement : MonoBehaviour
     private float maxSpeed = 3.0f;
     [SerializeField]
     private float speed = 2.0f;
+    public bool isAccelerating = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,11 @@ public class SMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && rb.velocity.magnitude < maxSpeed)
         {
             rb.AddForce(transform.up * speed);
+            isAccelerating= true;
+        }
+        else
+        {
+            isAccelerating= false;
         }
         rb.AddForce(-transform.up * 0.0001f);
     }
