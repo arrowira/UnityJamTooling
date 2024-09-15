@@ -27,14 +27,14 @@ public class Alien_1_behaviour : MonoBehaviour
         float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        rb.AddForce(transform.right * Random.RandomRange(4,10), ForceMode2D.Impulse);
+        rb.AddForce(transform.right * Random.RandomRange(2,7), ForceMode2D.Impulse);
         Invoke("Attack", 1.0f);
         
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.velocity = new Vector2(rb.velocity.x-0.01f, rb.velocity.y-0.01f);
     }
 }

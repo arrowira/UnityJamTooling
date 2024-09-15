@@ -22,8 +22,7 @@ public class rotate : MonoBehaviour
         if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z/4) != Mathf.Floor(rotCheck.rotation.eulerAngles.z/4))
         {
             
-            Debug.Log(rotCheck.rotation.eulerAngles.z);
-            Debug.Log(transform.rotation.eulerAngles.z);
+            
             if(transform.rotation.eulerAngles.z < 90 && rotCheck.rotation.eulerAngles.z > 270)
             {
                 gameObject.transform.Rotate(new Vector3(0, 0, -speed));
