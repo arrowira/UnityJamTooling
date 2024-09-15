@@ -30,6 +30,6 @@ public class SMovement : MonoBehaviour
         {
             isAccelerating= false;
         }
-        rb.AddForce(-transform.up * 0.0001f);
+        rb.AddForce(-transform.up * 0.1f);
     }
 }
