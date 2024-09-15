@@ -17,7 +17,15 @@ public class RotationCheck : MonoBehaviour
         float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
 
         //Ta Daaa
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle-180));
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle - 180));
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
+        }
+        
     }
 
     float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
