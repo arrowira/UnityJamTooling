@@ -19,7 +19,7 @@ public class rotate : MonoBehaviour
     void FixedUpdate()
     {
         //if I need to rotate
-        if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z/2) != Mathf.Floor(rotCheck.rotation.eulerAngles.z/2))
+        if (Mathf.Floor(gameObject.transform.rotation.eulerAngles.z/4) != Mathf.Floor(rotCheck.rotation.eulerAngles.z/4))
         {
             
             Debug.Log(rotCheck.rotation.eulerAngles.z);
