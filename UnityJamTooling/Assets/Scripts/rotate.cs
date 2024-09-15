@@ -31,13 +31,28 @@ public class rotate : MonoBehaviour
             }
             else
             {
-                if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z )
+                if (Mathf.Abs(transform.rotation.eulerAngles.z - rotCheck.rotation.eulerAngles.z) < 180)
                 {
-                    gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                    if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z)
+                    {
+                        gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                    }
+                    else
+                    {
+                        gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                    }
+                    
                 }
                 else
                 {
-                    gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                    if (transform.rotation.eulerAngles.z < rotCheck.rotation.eulerAngles.z)
+                    {
+                        gameObject.transform.Rotate(new Vector3(0, 0, -speed));
+                    }
+                    else
+                    {
+                        gameObject.transform.Rotate(new Vector3(0, 0, speed));
+                    }
                 }
                
 
