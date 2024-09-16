@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class shooting : MonoBehaviour
 {
+    [SerializeField]
+    private Transform playerTransform;
     public GameObject projectilePrefab;
     [SerializeField]
     private Rigidbody2D playerRb;
@@ -13,6 +15,8 @@ public class shooting : MonoBehaviour
     private float whichGun = 0;
     private float shockpower = 1;
     private bool shocking = false;
+    [SerializeField]
+    private GameObject muzzle;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,7 +69,8 @@ public class shooting : MonoBehaviour
     }
     void ShootProjectile()
     {
-        
+        GameObject muzzleFlash = Instantiate(muzzle, transform.position, Quaternion.Euler(new Vector3(-playerTransform.rotation.eulerAngles.z, 90f, playerTransform.rotation.eulerAngles.z)));
+ 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
         bulletRb = projectile.GetComponent<Rigidbody2D>();
         bulletRb.velocity = playerRb.velocity;

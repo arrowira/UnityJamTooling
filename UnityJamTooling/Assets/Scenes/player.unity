@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotCheck: {fileID: 1106510674}
-  speed: 4
+  speed: 7
   isTurningRight: 0
   isTurningLeft: 0
 --- !u!4 &390388552
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 390388554}
   maxSpeed: 24
-  speed: 8
+  speed: 4
   isAccelerating: 0
 --- !u!50 &390388554
 Rigidbody2D:
@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 1408498954}
   m_Layer: 0
   m_Name: gunTip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1966,9 +1966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cad71c1afd4da4788ae88fef96348d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 390388552}
   projectilePrefab: {fileID: 3659880556369439175, guid: 2541713eab8928e42b354de8dc8106ea, type: 3}
   playerRb: {fileID: 390388554}
-  whichGun: 1
+  whichGun: 0
+  muzzle: {fileID: 5468307842837351001, guid: a3016d6b86509f24a941b85904aefbcc, type: 3}
 --- !u!61 &1408498954
 BoxCollider2D:
   m_ObjectHideFlags: 0
