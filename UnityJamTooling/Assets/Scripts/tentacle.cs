@@ -25,7 +25,7 @@ public class tentacle : MonoBehaviour
         targ.x = targ.x - objectPos.x;
         targ.y = targ.y - objectPos.y;
 
-        float angle = (Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg)+startRot;
+        float angle = Mathf.Floor(((Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg)+startRot)/10)*10;
         if (angle > 180)
         {
             angle = -180 + (angle - 180);
