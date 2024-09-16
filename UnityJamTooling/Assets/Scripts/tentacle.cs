@@ -29,10 +29,7 @@ public class tentacle : MonoBehaviour
        
         float angle = (Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg+startRot);
 
-        if (reporter)
-        {
-            Debug.Log(angle-90f);
-        }
+        
 
         if (angle > 180)
         {
@@ -42,12 +39,16 @@ public class tentacle : MonoBehaviour
         {
             angle = 180 - (angle + 180);
         }
+        if (reporter)
+        {
+            Debug.Log(angle);
+        }
 
         if ((angle-90f)<90 && (angle-90f) > -90)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -startRot + (angle - 90f)/constraint));
         }
-        else if ((angle - 90f) < 179 && (angle - 90f) > -179)
+        else if ((angle - 90f) < 89 && (angle - 90f) > -269)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (-startRot + (-angle - 90f) / constraint)));
         }
