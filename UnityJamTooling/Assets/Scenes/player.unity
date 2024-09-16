@@ -2639,6 +2639,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 548851958236888518, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752919210872706234, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
+      propertyPath: reporter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3520582265987313854, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.31465176
@@ -2682,6 +2690,10 @@ PrefabInstance:
     - target: {fileID: 5357005884852259736, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
       propertyPath: m_Name
       value: SmallAlienManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767126513424637886, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
+      propertyPath: reporter
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7849854857315401385, guid: 93eb6bc4cf58a714ea2f7c91749f0d15, type: 3}
       propertyPath: m_LinearDrag

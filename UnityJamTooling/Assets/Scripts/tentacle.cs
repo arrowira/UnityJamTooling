@@ -8,6 +8,8 @@ public class tentacle : MonoBehaviour
     [SerializeField]
     private float constraint = 2.0f;
     private float startRot = 0;
+    [SerializeField]
+    private bool reporter = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +26,32 @@ public class tentacle : MonoBehaviour
         Vector3 objectPos = transform.position;
         targ.x = targ.x - objectPos.x;
         targ.y = targ.y - objectPos.y;
+       
+        float angle = (Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg+startRot);
 
-        float angle = (Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg)+startRot;
+        if (reporter)
+        {
+            Debug.Log(angle-90f);
+        }
+
         if (angle > 180)
         {
             angle = -180 + (angle - 180);
         }
-        
-       if ((angle-90f)<90 && (angle-90f) > -90)
+        if (angle < -180)
+        {
+            angle = 180 - (angle + 180);
+        }
+
+        if ((angle-90f)<90 && (angle-90f) > -90)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -startRot + (angle - 90f)/constraint));
         }
-        else if ((angle - 90f) < 100 && (angle - 90f) > -100)
-        {
-
-        }
-        else
+        else if ((angle - 90f) < 179 && (angle - 90f) > -179)
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (-startRot + (-angle - 90f) / constraint)));
         }
+
        
     }
 }
