@@ -10,7 +10,7 @@ public class bullet : MonoBehaviour
     void Start()
     {
        
-        rb.AddForce(transform.right * 10, ForceMode2D.Impulse);
+        rb.AddForce(transform.right * 20, ForceMode2D.Impulse);
         Invoke("destroyMe", 3.0f);
     }
     void destroyMe()
