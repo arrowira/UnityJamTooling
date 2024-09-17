@@ -7,6 +7,10 @@ public class Alien_1_behaviour : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
+    [SerializeField]
+    private GameObject alienMan;
+    [SerializeField]
+    private GameObject deathParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +39,11 @@ public class Alien_1_behaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "Debris")
         {
-            
+            Rigidbody2D DebrisRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (DebrisRB.velocity.magnitude > 3.0f){
+                GameObject DP = Instantiate(deathParticles, transform.position, transform.rotation);
+                Destroy(alienMan);
+            }
         }
     }
 
