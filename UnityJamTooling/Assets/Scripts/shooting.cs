@@ -38,7 +38,7 @@ public class shooting : MonoBehaviour
         if (shocking)
         {
             Rigidbody2D ObjectInRangeRB = collision.GetComponent<Rigidbody2D>();
-            ObjectInRangeRB.AddForce(transform.right * 8 * Mathf.Floor(shockpower), ForceMode2D.Impulse);
+            ObjectInRangeRB.AddForce(transform.right * 5, ForceMode2D.Impulse);
         }
     }
     // Update is called once per frame
