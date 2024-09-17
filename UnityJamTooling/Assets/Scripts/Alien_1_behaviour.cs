@@ -31,6 +31,13 @@ public class Alien_1_behaviour : MonoBehaviour
         Invoke("Attack", 1.0f);
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Debris")
+        {
+            
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shooting : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class shooting : MonoBehaviour
     public GameObject projectilePrefab;
     [SerializeField]
     private Rigidbody2D playerRb;
+    [SerializeField]
+    private GameObject forceMuzzle;
     
     private Rigidbody2D bulletRb;
     [SerializeField]
@@ -17,10 +20,14 @@ public class shooting : MonoBehaviour
     private bool shocking = false;
     [SerializeField]
     private GameObject muzzle;
+    [SerializeField]
+    private Image gun0;
+    [SerializeField]
+    private Image gun1;
     // Start is called before the first frame update
     void Start()
     {
-
+        gun1.enabled = false;
     }
     void endShock()
     {
@@ -31,12 +38,27 @@ public class shooting : MonoBehaviour
         if (shocking)
         {
             Rigidbody2D ObjectInRangeRB = collision.GetComponent<Rigidbody2D>();
-            ObjectInRangeRB.AddForce(transform.right * 20 * Mathf.Floor(shockpower), ForceMode2D.Impulse);
+            ObjectInRangeRB.AddForce(transform.right * 3 * Mathf.Floor(shockpower), ForceMode2D.Impulse);
         }
     }
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (whichGun == 0)
+            { 
+                gun0.enabled = false;
+                gun1.enabled = true;
+                whichGun = 1;
+            }
+            else
+            {
+                gun0.enabled = true;
+                gun1.enabled = false;
+                whichGun = 0;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -50,7 +72,7 @@ public class shooting : MonoBehaviour
         {
             if (whichGun == 1)
             {
-                shockpower += 0.01f;
+                shockpower += 1f;
             }
             
         }
@@ -58,7 +80,8 @@ public class shooting : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0) && whichGun == 1)
         {
             shocking = true;
-            Debug.Log(shockpower);
+
+            GameObject forceFlash = Instantiate(forceMuzzle, transform.position, Quaternion.Euler(new Vector3(-playerTransform.rotation.eulerAngles.z, 90f, playerTransform.rotation.eulerAngles.z)));
             Invoke("endShock", 0.1f);
             if (whichGun == 1)
             {

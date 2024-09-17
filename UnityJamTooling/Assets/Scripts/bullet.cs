@@ -27,7 +27,9 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.tag != "Player"){
             if (collision.gameObject.layer == 3)
             {
-                collision.gameObject.transform.localScale = new Vector3(collision.gameObject.transform.localScale.x * 2, collision.gameObject.transform.localScale.y * 2);
+                
+                Debris d = collision.gameObject.GetComponent<Debris>();
+                d.Enlarge(3.0f);
             }
             Destroy(gameObject);
         }
