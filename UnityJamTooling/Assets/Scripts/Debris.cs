@@ -5,6 +5,7 @@ using UnityEngine;
 public class Debris : MonoBehaviour
 {
     private bool hasBeenEnlarged = false;
+    public float speedMult = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class Debris : MonoBehaviour
     {
         if (!hasBeenEnlarged)
         {
+            speedMult = 6;
             transform.localScale = new Vector3(transform.localScale.x * size, transform.localScale.y * size);
             hasBeenEnlarged = true;
         }

@@ -38,7 +38,9 @@ public class shooting : MonoBehaviour
         if (shocking)
         {
             Rigidbody2D ObjectInRangeRB = collision.GetComponent<Rigidbody2D>();
-            ObjectInRangeRB.AddForce(transform.right * 5, ForceMode2D.Impulse);
+            Debris d = collision.GetComponent<Debris>();
+
+            ObjectInRangeRB.AddForce(transform.right * 1 * d.speedMult, ForceMode2D.Impulse);
         }
     }
     // Update is called once per frame
@@ -85,7 +87,7 @@ public class shooting : MonoBehaviour
             Invoke("endShock", 0.1f);
             if (whichGun == 1)
             {
-                shockpower = 1;
+                shockpower += 1;
             }
         }
 

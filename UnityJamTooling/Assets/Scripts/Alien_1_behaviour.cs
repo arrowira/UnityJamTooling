@@ -40,7 +40,7 @@ public class Alien_1_behaviour : MonoBehaviour
         if (collision.gameObject.tag == "Debris")
         {
             Rigidbody2D DebrisRB = collision.gameObject.GetComponent<Rigidbody2D>();
-            if (DebrisRB.velocity.magnitude > 3.0f){
+            if (DebrisRB.velocity.magnitude > 20.0f){
                 GameObject DP = Instantiate(deathParticles, transform.position, transform.rotation);
                 Destroy(alienMan);
             }
