@@ -9,10 +9,22 @@ public class HP : MonoBehaviour
     [SerializeField]
     private Image hpBar;
     private float health = 100;
+    private bool damageCooldown = false;
     // Start is called before the first frame update
     public void takeDamage(float damage)
     {
-        health -= damage;
+        if (!damageCooldown)
+        {
+            health -= damage;
+            damageCooldown = true;
+            Invoke("endDamageCD", 0.5f);
+        }
+
+        
+    }
+    void endDamageCD()
+    {
+        damageCooldown= false;
     }
     void Start()
     {

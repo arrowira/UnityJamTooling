@@ -6,10 +6,15 @@ public class Debris : MonoBehaviour
 {
     private bool hasBeenEnlarged = false;
     public float speedMult = 1;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        float randTurn = Random.Range(-3, 3);
+        float randMove = Random.Range(-3, 3);
+        rb.AddTorque(10*randTurn);
+        rb.AddForce(transform.right * 5 * randMove);
     }
     public void Enlarge(float size)
     {
