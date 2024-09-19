@@ -40,7 +40,8 @@ public class tentacle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             behave = 0;
-            hp.takeDamage(10f);
+            hp.takeDamage(20f);
+           
             playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
             Invoke("endShake", 1.0f);
         }
