@@ -21,6 +21,7 @@ public class tentacle : MonoBehaviour
     HP hp;
     [SerializeField]
     private float damageAmt = 20f;
+    private bool canLaunch = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,12 @@ public class tentacle : MonoBehaviour
             if (alienType == 0)
             {
                 hp.takeDamage(damageAmt);
-                playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
+                if (canLaunch)
+                {
+                    playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
+                    Invoke("LaunchCD", 0.5f);
+                }
+                
             }
             if (alienType == 1)
             {
@@ -56,13 +62,23 @@ public class tentacle : MonoBehaviour
             else
             {
                 hp.takeDamage(damageAmt * 2);
-                playerRb.AddForce(transform.up * 3, ForceMode2D.Impulse);
+                if (canLaunch)
+                {
+                    playerRb.AddForce(transform.up * 3, ForceMode2D.Impulse);
+                    canLaunch= false;
+                    Invoke("LaunchCD", 0.5f);
+                }
+                
             }
             
            
             
             Invoke("endShake", 1.0f);
         }
+    }
+    void LaunchCD()
+    {
+        canLaunch = true;
     }
     void FixedUpdate()
     {
