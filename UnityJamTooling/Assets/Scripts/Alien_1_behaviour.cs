@@ -11,6 +11,10 @@ public class Alien_1_behaviour : MonoBehaviour
     private GameObject alienMan;
     [SerializeField]
     private GameObject deathParticles;
+    [SerializeField]
+    private float maxSpeed = 3.0f;
+    [SerializeField]
+    private float speedCap = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +35,10 @@ public class Alien_1_behaviour : MonoBehaviour
         float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        rb.AddForce(transform.right * Random.RandomRange(1,3), ForceMode2D.Impulse);
+        if (rb.velocity.magnitude < speedCap)
+        {
+            rb.AddForce(transform.right * Random.RandomRange(1, maxSpeed), ForceMode2D.Impulse);
+        }
         Invoke("Attack", 1.0f);
         
     }

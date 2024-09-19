@@ -51,10 +51,10 @@ public class SMovement : MonoBehaviour
 
         if (DoubleClick())
         {
-            if (fuel > 10)
+            if (fuel > 15)
             {
                 rb.AddForce(transform.up * speed * 2, ForceMode2D.Impulse);
-                fuel -= 10;
+                fuel -= 15;
             }
 
             

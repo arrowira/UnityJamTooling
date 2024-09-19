@@ -16,8 +16,11 @@ public class tentacle : MonoBehaviour
     private bool reporter = false;
     private int behave = 0;
     private Transform med;
-    
+    [SerializeField]
+    private float alienType = 0;
     HP hp;
+    [SerializeField]
+    private float damageAmt = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +43,24 @@ public class tentacle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player"){
             behave = 0;
-            hp.takeDamage(20f);
+            if (alienType == 0)
+            {
+                hp.takeDamage(damageAmt);
+                playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
+            }
+            if (alienType == 1)
+            {
+                hp.takeDamage(damageAmt/2);
+                playerRb.AddForce(transform.up * 1, ForceMode2D.Impulse);
+            }
+            else
+            {
+                hp.takeDamage(damageAmt * 2);
+                playerRb.AddForce(transform.up * 3, ForceMode2D.Impulse);
+            }
+            
            
-            playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
+            
             Invoke("endShake", 1.0f);
         }
     }

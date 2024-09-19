@@ -270,6 +270,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &2039863465891637772
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +347,7 @@ GameObject:
   - component: {fileID: 4453205674407852420}
   - component: {fileID: 7338595816067616668}
   - component: {fileID: 342821101913354684}
+  - component: {fileID: 8953935646532247454}
   m_Layer: 0
   m_Name: tentacle-4.png
   m_TagString: Untagged
@@ -434,6 +437,53 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1
   reporter: 0
+  alienType: 1
+  damageAmt: 20
+--- !u!61 &8953935646532247454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312424531651985668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00019553304, y: 0.7219525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7500482, y: 1.7560948}
+  m_EdgeRadius: 0
 --- !u!1 &2544371017993658305
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +585,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &3568117428027710737
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +598,7 @@ GameObject:
   - component: {fileID: 7168688569069668547}
   - component: {fileID: 2460146720891532136}
   - component: {fileID: 255466080088621737}
+  - component: {fileID: 5583027864552551764}
   m_Layer: 0
   m_Name: tentacle-4.png
   m_TagString: Untagged
@@ -635,6 +688,53 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1
   reporter: 0
+  alienType: 1
+  damageAmt: 20
+--- !u!61 &5583027864552551764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568117428027710737}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00019553304, y: 0.7219525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7500482, y: 1.7560948}
+  m_EdgeRadius: 0
 --- !u!1 &3580579659523970118
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +882,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &3853825224048190804
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +1017,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &3992256245231127637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienMan: {fileID: 5623341833522524756}
   deathParticles: {fileID: 8868130549150861055, guid: eb6a8cbdaaed3244193f9e0e632de769, type: 3}
+  maxSpeed: 3
+  speedCap: 100
 --- !u!50 &1901597567320079753
 Rigidbody2D:
   serializedVersion: 4
@@ -1137,6 +1243,7 @@ GameObject:
   - component: {fileID: 6114482074791835310}
   - component: {fileID: 4662950969424121696}
   - component: {fileID: 380875458896687799}
+  - component: {fileID: 5882221392256809569}
   m_Layer: 0
   m_Name: tentacle-4.png
   m_TagString: Untagged
@@ -1226,6 +1333,53 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1
   reporter: 0
+  alienType: 1
+  damageAmt: 20
+--- !u!61 &5882221392256809569
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291300906849345290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00019553304, y: 0.7219525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7500482, y: 1.7560948}
+  m_EdgeRadius: 0
 --- !u!1 &4755840301290667496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1481,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &4982859030717642269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1667,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &7205168148673483123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1680,7 @@ GameObject:
   - component: {fileID: 1285165032049237236}
   - component: {fileID: 1283366438902602361}
   - component: {fileID: 4327470254559744973}
+  - component: {fileID: 3420327915426705034}
   m_Layer: 0
   m_Name: tentacle-4.png
   m_TagString: Untagged
@@ -1611,6 +1770,53 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1
   reporter: 0
+  alienType: 1
+  damageAmt: 20
+--- !u!61 &3420327915426705034
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205168148673483123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00019553304, y: 0.7219525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7500482, y: 1.7560948}
+  m_EdgeRadius: 0
 --- !u!1 &7274390417291796504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1950,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &8272315568021837441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,3 +2053,5 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
