@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class tentacle : MonoBehaviour
 {
     private GameObject player;
+    private Rigidbody2D playerRb;
     [SerializeField]
     private bool isSmallest = false;
     [SerializeField]
@@ -26,6 +27,7 @@ public class tentacle : MonoBehaviour
             med = transform.parent;
         }
         player = GameObject.FindWithTag("Player");
+        playerRb = player.GetComponent<Rigidbody2D>();
         hp = player.GetComponent<HP>();
         startRot = transform.rotation.eulerAngles.z;
     }
@@ -39,6 +41,7 @@ public class tentacle : MonoBehaviour
         if (collision.gameObject.tag == "Player"){
             behave = 0;
             hp.takeDamage(10f);
+            playerRb.AddForce(transform.up * 2, ForceMode2D.Impulse);
             Invoke("endShake", 1.0f);
         }
     }
