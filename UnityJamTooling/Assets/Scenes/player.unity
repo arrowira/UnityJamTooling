@@ -1177,7 +1177,7 @@ MonoBehaviour:
   isAccelerating: 0
   fuelBar: {fileID: 551322508}
   lowFuel: {fileID: 1577165635}
-  Jetpack: {fileID: 0}
+  Jetpack: {fileID: 390388557}
 --- !u!50 &390388554
 Rigidbody2D:
   serializedVersion: 4
