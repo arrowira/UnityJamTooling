@@ -24,6 +24,43 @@ public class SMovement : MonoBehaviour
     {
         
     }
+    float clicked = 0;
+    float clicktime = 0;
+    float clickdelay = 0.5f;
+
+    bool DoubleClick()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            clicked++;
+            if (clicked == 1) clicktime = Time.time;
+        }
+        if (clicked > 1 && Time.time - clicktime < clickdelay)
+        {
+            clicked = 0;
+            clicktime = 0;
+            return true;
+        }
+        else if (clicked > 2 || Time.time - clicktime > 1) clicked = 0;
+        return false;
+    }
+
+
+    private void Update()
+    {
+
+        if (DoubleClick())
+        {
+            if (fuel > 10)
+            {
+                rb.AddForce(transform.up * speed * 2, ForceMode2D.Impulse);
+                fuel -= 10;
+            }
+
+            
+
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()
