@@ -18,11 +18,13 @@ public class SMovement : MonoBehaviour
     private Image fuelBar;
     [SerializeField]
     private Image lowFuel;
+
+    public AudioSource Jetpack;
+    bool sound = false;
     
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Jetpack = GetComponent<AudioSource>();
     }
     float clicked = 0;
     float clicktime = 0;
@@ -81,6 +83,7 @@ public class SMovement : MonoBehaviour
             fuel -= fuelConsumption;
             isAccelerating= true;
 
+
         }
         else
         {
@@ -89,6 +92,16 @@ public class SMovement : MonoBehaviour
             }
            
             isAccelerating= false;
+        }
+        if(isAccelerating == true && sound == false)
+        {
+            sound = true;
+            Jetpack.Play();
+            Jetpack.loop = true;
+        } else if (sound == true)
+        {
+            Jetpack.Stop();
+            sound = false;
         }
         
     }
