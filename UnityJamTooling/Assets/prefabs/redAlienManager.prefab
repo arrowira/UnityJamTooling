@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.75
   reporter: 0
 --- !u!1 &2039863465891637772
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1
   reporter: 0
 --- !u!1 &2544371017993658305
@@ -530,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.25
   reporter: 0
 --- !u!1 &3568117428027710737
@@ -629,6 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1
   reporter: 0
 --- !u!1 &3580579659523970118
@@ -775,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.75
   reporter: 0
 --- !u!1 &3853825224048190804
@@ -907,6 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.75
   reporter: 0
 --- !u!1 &3992256245231127637
@@ -966,7 +972,7 @@ GameObject:
   - component: {fileID: 6169067244114264661}
   - component: {fileID: 1901597567320079753}
   - component: {fileID: 2566481615613880354}
-  - component: {fileID: 8789970872908412211}
+  - component: {fileID: 1312982896904706569}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Untagged
@@ -1075,7 +1081,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6347065, y: 2.9071572}
   m_EdgeRadius: 0
---- !u!61 &8789970872908412211
+--- !u!61 &1312982896904706569
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1104,10 +1110,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.033326745, y: 0.21662414}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1118,7 +1124,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5996864, y: 2.9662817}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &4291300906849345290
 GameObject:
@@ -1217,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1
   reporter: 0
 --- !u!1 &4755840301290667496
@@ -1317,6 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.25
   reporter: 0
 --- !u!1 &4982859030717642269
@@ -1500,6 +1508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.25
   reporter: 0
 --- !u!1 &7205168148673483123
@@ -1599,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1
   reporter: 0
 --- !u!1 &7274390417291796504
@@ -1731,6 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.25
   reporter: 0
 --- !u!1 &8272315568021837441
@@ -1831,5 +1842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d02003d6fa314380603e857bc2933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSmallest: 0
   constraint: 1.75
   reporter: 0
