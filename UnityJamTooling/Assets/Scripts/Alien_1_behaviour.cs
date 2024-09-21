@@ -21,13 +21,14 @@ public class Alien_1_behaviour : MonoBehaviour
     private GameObject fuelPowerUp;
     [SerializeField]
     private GameObject hpPowerUp;
+    private Kills kills;
     private AUM aum;
     void Start()
     {
         
     
         aum = GameObject.FindWithTag("AudioMan").GetComponent<AUM>();
-       
+        kills = GameObject.FindWithTag("Player").GetComponent<Kills>();
         player = GameObject.FindWithTag("Player");
         rb = gameObject.GetComponent<Rigidbody2D>();
         Attack();
@@ -81,6 +82,7 @@ public class Alien_1_behaviour : MonoBehaviour
                     
                 }
                 aum.squish();
+                kills.addKill();
                 Destroy(alienMan);
             }
         }
