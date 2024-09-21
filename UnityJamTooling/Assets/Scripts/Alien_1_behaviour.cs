@@ -57,19 +57,24 @@ public class Alien_1_behaviour : MonoBehaviour
                 GameObject DP = Instantiate(deathParticles, transform.position, transform.rotation);
                 if (EliteType)
                 {
-                    Instantiate(hpPowerUp);
+                    Instantiate(hpPowerUp, transform.position, hpPowerUp.transform.rotation);
                 }
                 else
                 {
-                    float i = Random.Range(0, 2);
-                    if (i>1)
+                    float j = Random.Range(0, 30);
+                    if (j > 28)
                     {
-                        Instantiate(hpPowerUp);
+                        float i = Random.Range(0, 2);
+                        if (i > 1)
+                        {
+                            Instantiate(hpPowerUp, transform.position, hpPowerUp.transform.rotation);
+                        }
+                        else
+                        {
+                            Instantiate(fuelPowerUp, transform.position, hpPowerUp.transform.rotation);
+                        }
                     }
-                    else
-                    {
-                        Instantiate(fuelPowerUp);
-                    }
+                    
                 }
                 Destroy(alienMan);
             }

@@ -218,6 +218,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &1355660517821015886
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +321,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &1456941039314398577
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +501,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &2349332518366386116
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +604,8 @@ MonoBehaviour:
   isSmallest: 1
   constraint: 1
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!61 &263680750024229065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -744,6 +752,8 @@ MonoBehaviour:
   isSmallest: 1
   constraint: 1
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!61 &1081790673662568959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -922,6 +932,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &2919795602315506298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1035,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &3324773691017996580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1170,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &4551810820523156485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1273,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.75
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &5025605126067408630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1376,8 @@ MonoBehaviour:
   isSmallest: 1
   constraint: 1
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!61 &8408409287023269773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1622,6 +1642,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &7558294387625484869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1745,8 @@ MonoBehaviour:
   isSmallest: 1
   constraint: 1
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!61 &1470651166964739044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1913,6 +1937,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienMan: {fileID: 5357005884852259736}
   deathParticles: {fileID: 8868130549150861055, guid: eb6a8cbdaaed3244193f9e0e632de769, type: 3}
+  maxSpeed: 3
+  speedCap: 100
+  EliteType: 0
+  hpPowerUp: {fileID: 9196762516373072484, guid: 8e4e277d68e320347b09cd5bc9be2ed1, type: 3}
+  fuelPowerUp: {fileID: 721436195684342441, guid: 9b2b7dc2e9ce16846aff0b98d7bc52d8, type: 3}
 --- !u!50 &7849854857315401385
 Rigidbody2D:
   serializedVersion: 4
@@ -2163,6 +2192,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &9199139098964253585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,6 +2295,8 @@ MonoBehaviour:
   isSmallest: 0
   constraint: 1.25
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!1 &9214235292757261587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2398,8 @@ MonoBehaviour:
   isSmallest: 1
   constraint: 1
   reporter: 0
+  alienType: 0
+  damageAmt: 20
 --- !u!61 &1120226459880965238
 BoxCollider2D:
   m_ObjectHideFlags: 0
