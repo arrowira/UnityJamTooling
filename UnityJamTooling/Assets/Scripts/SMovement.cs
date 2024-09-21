@@ -13,6 +13,7 @@ public class SMovement : MonoBehaviour
     private float speed = 2.0f;
     public bool isAccelerating = false;
     private float fuel = 100f;
+    public float maxFuel = 100f;
     private float fuelConsumption = 0.1f;
     [SerializeField]
     private Image fuelBar;
@@ -75,7 +76,7 @@ public class SMovement : MonoBehaviour
         {
             lowFuel.enabled = false;
         }
-        fuelBar.fillAmount = fuel / 100;
+        fuelBar.fillAmount = fuel / maxFuel;
         if (Input.GetKey(KeyCode.Space) && rb.velocity.magnitude < maxSpeed && fuel > 0)
         {
             rb.AddForce(transform.up * speed);
@@ -87,7 +88,7 @@ public class SMovement : MonoBehaviour
         }
         else
         {
-            if (fuel < 100){
+            if (fuel < maxFuel){
                 fuel += fuelConsumption*1.7f;
             }
            

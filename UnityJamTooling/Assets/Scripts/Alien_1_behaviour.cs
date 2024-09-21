@@ -15,6 +15,12 @@ public class Alien_1_behaviour : MonoBehaviour
     private float maxSpeed = 3.0f;
     [SerializeField]
     private float speedCap = 100f;
+    [SerializeField]
+    private bool EliteType = false;
+    [SerializeField]
+    private GameObject hpPowerUp;
+    [SerializeField]
+    private GameObject fuelPowerUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +55,22 @@ public class Alien_1_behaviour : MonoBehaviour
             Rigidbody2D DebrisRB = collision.gameObject.GetComponent<Rigidbody2D>();
             if (DebrisRB.velocity.magnitude > 18.0f){
                 GameObject DP = Instantiate(deathParticles, transform.position, transform.rotation);
+                if (EliteType)
+                {
+                    Instantiate(hpPowerUp);
+                }
+                else
+                {
+                    float i = Random.Range(0, 2);
+                    if (i>1)
+                    {
+                        Instantiate(hpPowerUp);
+                    }
+                    else
+                    {
+                        Instantiate(fuelPowerUp);
+                    }
+                }
                 Destroy(alienMan);
             }
         }
