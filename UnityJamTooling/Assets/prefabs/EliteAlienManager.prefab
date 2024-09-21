@@ -2475,8 +2475,8 @@ MonoBehaviour:
   maxSpeed: 2
   speedCap: 5
   EliteType: 1
-  hpPowerUp: {fileID: 9196762516373072484, guid: 8e4e277d68e320347b09cd5bc9be2ed1, type: 3}
   fuelPowerUp: {fileID: 721436195684342441, guid: 9b2b7dc2e9ce16846aff0b98d7bc52d8, type: 3}
+  hpPowerUp: {fileID: 9196762516373072484, guid: 8e4e277d68e320347b09cd5bc9be2ed1, type: 3}
 --- !u!61 &1162738250632328473
 BoxCollider2D:
   m_ObjectHideFlags: 0

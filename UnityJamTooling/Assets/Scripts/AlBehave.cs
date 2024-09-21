@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Alien_1_behaviour : MonoBehaviour
+public class AlBehave : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
@@ -21,17 +20,16 @@ public class Alien_1_behaviour : MonoBehaviour
     private GameObject fuelPowerUp;
     [SerializeField]
     private GameObject hpPowerUp;
-    private AUM aum;
+    public AUM aum;
     void Start()
     {
-        
-    
+
+
         aum = GameObject.FindWithTag("AudioMan").GetComponent<AUM>();
-       
         player = GameObject.FindWithTag("Player");
         rb = gameObject.GetComponent<Rigidbody2D>();
         Attack();
-        
+
     }
     void Attack()
     {
@@ -50,14 +48,15 @@ public class Alien_1_behaviour : MonoBehaviour
             rb.AddForce(transform.right * Random.RandomRange(1, maxSpeed), ForceMode2D.Impulse);
         }
         Invoke("Attack", 1.0f);
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Debris")
         {
             Rigidbody2D DebrisRB = collision.gameObject.GetComponent<Rigidbody2D>();
-            if (DebrisRB.velocity.magnitude > 18.0f){
+            if (DebrisRB.velocity.magnitude > 18.0f)
+            {
                 GameObject DP = Instantiate(deathParticles, transform.position, transform.rotation);
                 if (EliteType)
                 {
@@ -66,21 +65,21 @@ public class Alien_1_behaviour : MonoBehaviour
                 else
                 {
                     float j = Random.Range(0, 30);
-                    if (j > 20)
+                    if (j > 28)
                     {
                         float i = Random.Range(0, 2);
                         if (i > 1)
                         {
-                            Instantiate(fuelPowerUp, transform.position, hpPowerUp.transform.rotation);
+                            Instantiate(hpPowerUp, transform.position, hpPowerUp.transform.rotation);
                         }
                         else
                         {
                             Instantiate(fuelPowerUp, transform.position, hpPowerUp.transform.rotation);
                         }
                     }
-                    
+
                 }
-                aum.squish();
+                //aum.squish();
                 Destroy(alienMan);
             }
         }
@@ -89,7 +88,7 @@ public class Alien_1_behaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
 
     }
 }
