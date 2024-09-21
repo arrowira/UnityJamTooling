@@ -25,9 +25,12 @@ public class shooting : MonoBehaviour
     [SerializeField]
     private Image gun1;
     // Start is called before the first frame update
+
+    public AUM Get;
     void Start()
     {
         gun1.enabled = false;
+        Get = GameObject.FindWithTag("AudioMan").GetComponent<AUM>();
     }
     void endShock()
     {
@@ -67,6 +70,7 @@ public class shooting : MonoBehaviour
             if (whichGun == 0)
             {
                 ShootProjectile();
+                Get.ShootOpps();
             }
             
         }
@@ -75,6 +79,7 @@ public class shooting : MonoBehaviour
             if (whichGun == 1)
             {
                 shockpower += 1f;
+                Get.ShootOppps();
             }
             
         }

@@ -11,6 +11,7 @@ public class HP : MonoBehaviour
     private float health = 100;
     public float maxHP = 100;
     private bool damageCooldown = false;
+    public AUM Get;
     // Start is called before the first frame update
     public void takeDamage(float damage)
     {
@@ -18,6 +19,8 @@ public class HP : MonoBehaviour
         {
             health -= damage;
             damageCooldown = true;
+            Get = GameObject.FindWithTag("AudioMan").GetComponent<AUM>();
+            Get.FetchIpAdress();
             Invoke("endDamageCD", 0.5f);
         }
 
