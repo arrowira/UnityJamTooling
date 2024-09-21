@@ -26,6 +26,7 @@ public class SMovement : MonoBehaviour
     void Start()
     {
         Jetpack = GetComponent<AudioSource>();
+        sound = false;
     }
     float clicked = 0;
     float clicktime = 0;
@@ -99,7 +100,7 @@ public class SMovement : MonoBehaviour
             sound = true;
             Jetpack.Play();
             Jetpack.loop = true;
-        } else if (sound == true)
+        } else if (sound == true && isAccelerating == false)
         {
             Jetpack.Stop();
             sound = false;
