@@ -19,11 +19,11 @@ public class RotationCheck : MonoBehaviour
         //Ta Daaa
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, Mathf.Floor(angle/5)*5 - 180));
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, Mathf.Floor(angle/3)*3 - 180));
         }
         else
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, Mathf.Floor(angle/3)*3 + 90));
         }
         
     }

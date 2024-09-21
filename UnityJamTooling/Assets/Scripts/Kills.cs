@@ -7,7 +7,7 @@ public class Kills : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text killsText;
-    private float killamt  = 0;
+    public float killamt  = 0;
     public void addKill()
     {
         killamt += 1;

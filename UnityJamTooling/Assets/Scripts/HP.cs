@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class HP : MonoBehaviour
 {
     [SerializeField]
@@ -12,6 +13,8 @@ public class HP : MonoBehaviour
     public float maxHP = 100;
     private bool damageCooldown = false;
     public AUM Get;
+    private Kills kills;
+    
     // Start is called before the first frame update
     public void takeDamage(float damage)
     {
@@ -32,7 +35,7 @@ public class HP : MonoBehaviour
     }
     void Start()
     {
-        
+        kills = GameObject.FindWithTag("Player").GetComponent<Kills>();
     }
 
     // Update is called once per frame
@@ -47,9 +50,11 @@ public class HP : MonoBehaviour
 
             health = maxHP;
         }
-        if (health < 1 ) {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+        if (health < 1)
+        {
+            float killamt = kills.killamt;
+            StaticData.dataToKeep = killamt;
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
